@@ -1,0 +1,12 @@
+.env
+.env.sample
+.envrc
+.python-version
+Makefile
+Dockerfile
+**/*.pickle
+**/*.pkl
+frontend
+package_folder
+requirements.txt
+setup.py
