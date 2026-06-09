@@ -23,11 +23,9 @@ class TestNumpy(ChallengeResultTestCase):
                          np.eye(3, dtype='int').tolist())
         D = np.array([2, 9, 7, 3, 1, 5])
         self.assertEqual(self.result.E.tolist(), D.reshape(2, 3).tolist())
-        checkboard = np.tile(np.array([[1, 0], [0, 1]]), (4, 4))
-        self.assertEqual(self.result.F.tolist(), checkboard.tolist())
 
     def test_advanced_matrixes_manipulation(self):
-        self.assertEqual(self.result.reshaped_G.shape, (4, 1))
-        H = np.array([0, 4, -4, -3, 1, 1]).reshape(3, 2)
-        I = np.array([[0, 1], [1, -1], [2, 3]])
-        self.assertEqual(self.result.hi_sum.tolist(), (H + I).tolist())
+        self.assertEqual(self.result.reshaped_F.shape, (4, 1))
+        G = np.array([0, 4, -4, -3, 1, 1]).reshape(3, 2)
+        H = np.array([[0, 1], [1, -1], [2, 3]])
+        self.assertEqual(self.result.gh_sum.tolist(), (G + H).tolist())

@@ -1,9 +1,56 @@
 In this exercise, we will analyze the US Oil & Gas production from June 2008 to June 2018. The dataset is [available on Kaggle](https://www.kaggle.com/djzurawski/us-oil-and-gas-production-june-2008-to-june-2018)
 
+## Downloading the dataset on your VM
 
 1. Download the `U.S._natural_gas_production.csv` file from Kaggle
 2. Create a folder called `data` using the command `mkdir` in the Terminal in the folder of the challenge
 3. Store your csv in this `data` subfolder
+
+<details><summary markdown='span'>💡 Solution</summary>
+
+Your notebook is running on a cloud VM, so it cannot access files downloaded on your local machine.
+
+For the rest of the bootcamp, when a challenge asks you to download a dataset, make sure to download it **directly from the VM**.
+
+You can usually do this in one of two ways:
+
+1. **Using the Kaggle CLI**
+   Use this when the dataset is hosted on Kaggle, as in this challenge.
+
+2. **Using `curl` on a resource link**
+   We will cover this option in more detail tomorrow.
+
+### Option 1: Download with the Kaggle CLI
+
+On the Kaggle dataset page:
+
+1. Click **Download**
+2. Select **Download Via**
+3. Choose **Kaggle CLI**
+4. Copy and run the command in your VM terminal
+
+For this challenge, you can run:
+
+```bash
+pip install kaggle
+kaggle datasets download djzurawski/us-oil-and-gas-production-june-2008-to-june-2018
+mkdir data
+unzip us-oil-and-gas-production-june-2008-to-june-2018.zip -d data
+rm us-oil-and-gas-production-june-2008-to-june-2018.zip
+```
+
+This will:
+
+* install the Kaggle CLI;
+* download the dataset archive;
+* create a `data/` folder;
+* unzip the dataset into that folder;
+* remove the downloaded `.zip` file once it is no longer needed.
+
+</details>
+
+
+## Open the Challenge notebook
 
 When analyzing data, we don't start with writing `.py` files in VS Code, we stay in the notebook. VS Code will come later when we do some **Data Engineering** and create a Python script to be run at once.  For this challenge, we provide a completely blank notebook. We will walk you through the proper steps to keep an organized and presentable notebook while we explore the data set.  You will go back & forth between these instructions and the Notebook where you will write the code. Have fun!
 
@@ -153,6 +200,13 @@ To answer this question, we need to **aggregate** the rows based on the **year**
 </summary>
 
  Take a look at [`DataFrame.groupby()`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.groupby.html) and [`DataFrameGroupBy.sum()`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.core.groupby.DataFrameGroupBy.sum.html).
+
+</details>
+
+<details><summary markdown='span'>⛓️‍💥 Getting an error <code>TypeError: datetime64 type does not support sum operations</code>?
+</summary>
+
+  The DataFrame we try to group has the column `Month`. That's a date, and you can't sum dates, only numeric columns. Check the documentation to figure out how you can instruct Pandas to only use numeric columns when making the sum.
 
 </details>
 
