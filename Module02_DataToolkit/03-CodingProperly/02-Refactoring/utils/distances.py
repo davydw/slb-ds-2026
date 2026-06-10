@@ -1,4 +1,3 @@
-# $CHALLENGIFY_BEGIN
 """
 Distance calculation utilities.
 
@@ -79,4 +78,3 @@ def minkowski(a, b, p):
 
     distance = (abs(d_x)**p + abs(d_y)**p) ** (1 / p)
     return distance
-# $CHALLENGIFY_END
