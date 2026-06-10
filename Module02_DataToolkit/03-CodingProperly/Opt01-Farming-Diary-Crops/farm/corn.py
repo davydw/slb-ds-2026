@@ -1,4 +1,3 @@
-# $DELETE_BEGIN
 # pylint: disable=pointless-string-statement
 """
 Module: corn
@@ -25,10 +24,7 @@ class Corn(Crop):
 """
 --- DISREGARD EVERYTHING BELOW THIS LINE ---
 This is a placeholder for the not-refactored class for the challenge version
-# $DELETE_END
 class Corn:
     # YOUR CODE HERE
     pass
-# $DELETE_BEGIN
 """
-# $DELETE_END

@@ -37,7 +37,6 @@ def main():
     Allows the user to perform actions such as planting crops, watering them,
     adding animals, feeding them, and quitting the game.
     """
-    # $CHALLENGIFY_BEGIN
     crops = []
     animals = []
 
@@ -76,7 +75,6 @@ def main():
             print("See you next time")
         else:
             print("I don't know what you mean...")
-    # $CHALLENGIFY_END
 
 if __name__ == "__main__":
     main()

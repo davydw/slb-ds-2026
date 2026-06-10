@@ -28,15 +28,11 @@ print(f"The male chicken says {male_chicken.talk()}")
 print("\n\n📝 Day Four: Feed The Animals")
 
 # 1. Store all your animals in an `animals` list
-# $CHALLENGIFY_BEGIN
 animals = [cow, female_chicken, male_chicken]
-# $CHALLENGIFY_END
 
 # 2. Call the `feed` method on each animal (use a loop on the list)
-# $CHALLENGIFY_BEGIN
 for animal in animals:
     animal.feed()
-# $CHALLENGIFY_END
 
 # 3. Replace the TODOs
 
@@ -44,8 +40,6 @@ for animal in animals:
 # "The cow produced ## liters of milk"
 # "The female chicken produced ## eggs"
 # "The male chicken produced ## eggs"
-# $CHALLENGIFY_BEGIN
 print(f"The cow produced {cow.milk} liters of milk")
 print(f"The female chicken produced {female_chicken.eggs} eggs")
 print(f"The male chicken produced {male_chicken.eggs} eggs")
-# $CHALLENGIFY_END

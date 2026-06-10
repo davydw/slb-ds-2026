@@ -1,4 +1,3 @@
-# $CHALLENGIFY_BEGIN
 """
 Module: corn
 This module contains the Corn class, which is a subclass of Crop. It represents a specific type of
@@ -20,4 +19,3 @@ class Corn(Crop):
         Simulates watering the corn, increasing the number of grains by 10.
         """
         self.grains += 10
-# $CHALLENGIFY_END

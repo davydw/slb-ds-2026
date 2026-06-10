@@ -1,5 +1,4 @@
 # pylint: disable=too-few-public-methods
-# $CHALLENGIFY_BEGIN
 """
 Module: crop
 This module contains the Crop class, which represents a crop with grains and provides
@@ -28,4 +27,3 @@ class Crop:
             bool: True if the crop has 15 or more grains, False otherwise.
         """
         return self.grains >= 15
-# $CHALLENGIFY_END
