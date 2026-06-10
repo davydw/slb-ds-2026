@@ -1,5 +1,4 @@
 # pylint: disable=too-few-public-methods missing-module-docstring
-# $CHALLENGIFY_BEGIN
 class Shape:
     """
     Base class for different shapes.
@@ -27,7 +26,6 @@ class Shape:
             str: A message stating the name of the shape.
         """
         return f"My name is {self.name}."
-
 
 class Rectangle(Shape):
     """
@@ -123,5 +121,3 @@ class Circle(Shape):
             float: The perimeter of the circle.
         """
         return 2 * 3.14 * self.radius
-
-# $CHALLENGIFY_END
