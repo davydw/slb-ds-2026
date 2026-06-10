@@ -1,4 +1,6 @@
-In this exercise, we are going to play around with the stock market API [polygon.io](https://polygon.io/).
+# Stock Market API
+
+In this exercise, we are going to play around with the stock market API [Massive](https://massive.com/).
 
 🎯 The goal here is:
 - to get comfortable reading API documentation,
@@ -9,19 +11,12 @@ In this exercise, we are going to play around with the stock market API [polygon
 
 A common way of collecting data is through APIs. Those can be [public APIs](https://github.com/public-apis/public-apis) with authentication or not, free or paid, internal APIs at your company, etc.
 
-When it comes to APIs, there are some keywords that you should understand:
+When it comes to APIs, there are two **data formats** that will be sent back to you when performing an API call:
 
-- [SOAP](https://en.wikipedia.org/wiki/SOAP) (old)
-- [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) (current)
-- [GraphQL](https://en.wikipedia.org/wiki/GraphQL) (very new, less frequent)
 - [XML](https://en.wikipedia.org/wiki/XML) (long-established)
 - [JSON](https://en.wikipedia.org/wiki/JSON) (currently very widespread)
 
-The first three keywords refer to an architecture or a protocol on top of HTTP(s) and it is really important to figure out which one you are using when you want to **consume** data from an API.
-
-The last two keywords refer to a **data format** that would usually be sent back to you when performing an API call.
-
-ℹ️ Most modern APIs are RESTful and send back JSON. In this challenge, we are going to use such an API.
+ℹ️ Most modern APIs are send back JSON. In this challenge, we are going to use such an API.
 
 ## Reading the documentation
 
@@ -32,7 +27,7 @@ When presented with a new API to use, your first reflex should be to go straight
 1. What is the base URI?
 1. Which endpoints can I call? What data does it return?
 
-👯‍♂️ Buddy time! 👉  Let's find the API documentation page of **polygon.io**. Read the documentation, and try answering those questions. When you are comfortable with what this API is about, you can start working on the challenge.
+👯‍♂️ Buddy time! 👉  Let's find the API documentation page of **massive.com**. Read the documentation, and try answering those questions. When you are comfortable with what this API is about, you can start working on the challenge.
 
 <details><summary markdown='span'>Solution to find the documentation
 </summary>
@@ -40,7 +35,7 @@ Documentation pages are often hidden in the footer or in some menu.
 <br>
 Typing <i>'the_website_name API documentation'</i> in the google search bar is a quick way to find it too.
 <br>
-<strong>Solution</strong>: <a href="https://polygon.io/docs">https://polygon.io/docs</a>
+<strong>Solution</strong>: <a href="https://massive.com/docs">https://massive.com/docs</a>
 </details>
 
 ## Apple stock the last 90 days
@@ -57,12 +52,12 @@ Whenever you make an API call, you will have to provide this API key in your req
 
 For example, to get a certain day's stock prices:
 ```
-https://api.polygon.io/v1/open-close/AAPL/2025-02-03?adjusted=true&apiKey=YOUR_API_KEY
+https://api.massive.com/v1/open-close/AAPL/2025-02-03?adjusted=true&apiKey=YOUR_API_KEY
 ```
 
 ### Using the API
 
-👉 Now let's find in the Polygon API documentation the **URL** for historical Apple stock prices.
+👉 Now let's find in the Massive API documentation the **URL** for historical Apple stock prices.
 
 When you find the URL, copy and paste it in a new tab and look at the data you get from the API.
 
@@ -135,11 +130,11 @@ It should be a JSON looking like this:
 <details><summary markdown='span'>Solution
 </summary>
 You can find the information here in the documentation:
-<a href="https://polygon.io/docs/stocks/get_v2_aggs_ticker__stocksticker__range__multiplier___timespan___from___to">https://polygon.io/docs/stocks/get_v2_aggs_ticker__stocksticker__range__multiplier___timespan___from___to</a>
+<a href="https://massive.com/docs/stocks/get_v2_aggs_ticker__stocksticker__range__multiplier___timespan___from___to">https://massive.com/docs/stocks/get_v2_aggs_ticker__stocksticker__range__multiplier___timespan___from___to</a>
 <br>
 The URL is:
 <pre>
-https://api.polygon.io/v2/aggs/ticker/AAPL/range/1/day/2025-01-02/2025-02-03?adjusted=true&sort=asc&apiKey=YOUR_API_KEY
+https://api.massive.com/v2/aggs/ticker/AAPL/range/1/day/2025-01-02/2025-02-03?adjusted=true&sort=asc&apiKey=YOUR_API_KEY
 </pre>
 </details>
 
@@ -157,7 +152,7 @@ So how can we make our first call? Using the browser...
 
 The browser _is_ an HTTP client! If there is no complex request `Header` to set and the verb to use is `GET`, then it's just as easy as typing the URL in the address bar.
 
-## Using API data in pandas
+## Using API data in Pandas
 
 ### Setup
 
@@ -342,10 +337,10 @@ Hint: Sometimes you will need a URL that will give you a larger response, contai
 <details><summary markdown='span'>All Solutions
 </summary>
 <ol>
-    <li><code>https://api.polygon.io/v2/aggs/ticker/AMZN/range/1/day/2025-01-02/2025-02-03?apiKey=YOUR_API_KEY</code></li>
-    <li><code>https://api.polygon.io/v3/reference/tickers/META?apiKey=YOUR_API_KEY</code></li>
-    <li><code>https://api.polygon.io/vX/reference/financials?ticker=AAPL&timeframe=quarterly&limit=4&apiKey=YOUR_API_KEY</code></li>
-    <li><code>https://api.polygon.io/v2/reference/news?ticker=TSLA&limit=1&apiKey=YOUR_API_KEY</code></li>
+    <li><code>https://api.massive.com/v2/aggs/ticker/AMZN/range/1/day/2025-01-02/2025-02-03?apiKey=YOUR_API_KEY</code></li>
+    <li><code>https://api.massive.com/v3/reference/tickers/META?apiKey=YOUR_API_KEY</code></li>
+    <li><code>https://api.massive.com/vX/reference/financials?ticker=AAPL&timeframe=quarterly&limit=4&apiKey=YOUR_API_KEY</code></li>
+    <li><code>https://api.massive.com/v2/reference/news?ticker=TSLA&limit=1&apiKey=YOUR_API_KEY</code></li>
 </ol>
 </details>
 
