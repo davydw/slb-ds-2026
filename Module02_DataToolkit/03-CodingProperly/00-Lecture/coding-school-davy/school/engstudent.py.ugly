@@ -1,0 +1,11 @@
+class engstudent ( ) :
+    def __init__ (self, name, age) :
+      self.name=name.capitalize()
+      self.age=age
+    def says(self,Quote):
+        return f"{self.name} says: {Quote}"
+    @classmethod
+    def from_birth_year(clas, name,by):
+        import datetime
+        return clas(name = name.capitalize(),age =datetime.date.today().year-by)
+    language='Python'
