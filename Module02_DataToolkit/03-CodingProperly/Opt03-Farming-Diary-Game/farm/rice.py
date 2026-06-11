@@ -1,4 +1,3 @@
-# $CHALLENGIFY_BEGIN
 """
 Module: rice
 This module contains the Rice class, which is a subclass of Crop. It represents a specific type of
@@ -27,4 +26,3 @@ class Rice(Crop):
         Simulates transplanting the rice, increasing the number of grains by 10.
         """
         self.grains += 10
-# $CHALLENGIFY_END
